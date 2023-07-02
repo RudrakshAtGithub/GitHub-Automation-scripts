@@ -39,11 +39,6 @@ payload = json.dumps({
     "name": name,
     "description": "made with the GitHub API"
 })
-headers = {
-    'Authorization': f'Bearer {GITHUB_API_TOKEN}',
-    'Content-Type': 'application/json',
-    'User-Agent': f'{USERNAME}'
-}
 
 conn.request("POST", "/user/repos", payload, headers)
 res = conn.getresponse()
